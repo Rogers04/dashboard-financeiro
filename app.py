@@ -7,7 +7,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(page_title="Dashboard Financeiro", page_icon="💰", layout="wide")
-st.title("💰 Controlo Financeiro Unificado")
+st.title("💰 Controlo Financeiro")
 st.markdown("---")
 
 # --- 2. CONEXÃO E FUNÇÕES DE APOIO ---
@@ -250,7 +250,7 @@ with tab2:
             
             # Gráfico de barras simples para visualizar os gastos individuais
             # Como não temos "Dia" exato na sua tabela de VR (apenas valores soltos), 
-            # criamos um índice numérico para mostrar a sequência de gastos.
+            # criei um índice numérico para mostrar a sequência de gastos.
             df_vr_filtrado = df_vr_filtrado.reset_index()
             fig_vr = px.bar(df_vr_filtrado, y='Valor', title="Sequência de Gastos no Mês")
             st.plotly_chart(fig_vr, use_container_width=True)
