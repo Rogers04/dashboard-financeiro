@@ -6,8 +6,8 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA ---
-st.set_page_config(page_title="Dashboard Financeiro", page_icon="💰", layout="wide")
-st.title("💰 Controlo Financeiro")
+st.set_page_config(page_title="Dashboard Financeiro", layout="wide")
+st.title("Controlo Financeiro")
 st.markdown("---")
 
 # --- 2. CONEXÃO E FUNÇÕES DE APOIO ---
@@ -181,7 +181,7 @@ meses_unicos.sort(key=lambda x: ordem_meses.get(x, 99))
 mes_sel = st.sidebar.selectbox("Mês", meses_unicos)
 
 # --- INTERFACE DE ABAS ---
-tab1, tab2 = st.tabs(["💸 Contas Bancárias", "🍔 Vale Refeição"])
+tab1, tab2 = st.tabs(["Contas Bancárias", "Vale Refeição"])
 
 # === ABA 1: CONTAS ===
 with tab1:
